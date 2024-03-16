@@ -4,91 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Recipe 1</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Рецепт 1</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__inner container">
+            <h1 class="header__title title">FoodieHub</h1>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link nav__link_active" href="recipes.html">Recipes</a></li>
+                    <li><a class="nav__link" href="about.html">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section>
-            <h2>Суп з курки</h2>
-            <p>Це смачний рецепт супу з курячим бульйоном.</p>
-            <h3>Інгредієнти:</h3>
-            <ul>
-                <li>Курячий бульйон - 1 літр</li>
-                <li>Курка (варена) - 200 г</li>
-                <li>Морква - 1 шт</li>
-                <li>Картопля - 2 шт</li>
-                <li>Цибуля - 1 шт</li>
-                <li>Сіль, перець - за смаком</li>
-            </ul>
-            <h3>Інструкції:</h3>
-            <ol>
-                <li>Наріжте овочі і курку.</li>
-                <li>Додайте їх до киплячого бульйону.</li>
-                <li>Приправте сіллю та перцем.</li>
-                <li>Готуйте протягом 30 хвилин.</li>
-                <li>Подаємо гарячим. Смачного!</li>
-            </ol>
+            <div class="container">
+                <h2>Суп з курки</h2>
+                <p>Це смачний рецепт супу з курячим бульйоном.</p>
+                <h3>Інгредієнти:</h3>
+                <ul>
+                    <li>Курячий бульйон - 1 літр</li>
+                    <li>Курка (варена) - 200 г</li>
+                    <li>Морква - 1 шт</li>
+                    <li>Картопля - 2 шт</li>
+                    <li>Цибуля - 1 шт</li>
+                    <li>Сіль, перець - за смаком</li>
+                </ul>
+                <h3>Інструкції:</h3>
+                <ol>
+                    <li>Наріжте овочі і курку.</li>
+                    <li>Додайте їх до киплячого бульйону.</li>
+                    <li>Приправте сіллю та перцем.</li>
+                    <li>Готуйте протягом 30 хвилин.</li>
+                    <li>Подаємо гарячим. Смачного!</li>
+                </ol>
+            </div>
         </section>
 
         <section>
-            <h2>Інгредієнти (таблиця)</h2>
-            <table>
-                <tr>
-                    <th>Інгредієнт</th>
-                    <th>Кількість</th>
-                </tr>
-                <tr>
-                    <td>Курячий бульйон</td>
-                    <td>1 літр</td>
-                </tr>
-                <tr>
-                    <td>Курка (варена)</td>
-                    <td>200 г</td>
-                </tr>
-                <tr>
-                    <td>Морква</td>
-                    <td>1 шт</td>
-                </tr>
-                <tr>
-                    <td>Картопля</td>
-                    <td>2 шт</td>
-                </tr>
-                <tr>
-                    <td>Цибуля</td>
-                    <td>1 шт</td>
-                </tr>
-                <tr>
-                    <td>Сіль, перець</td>
-                    <td>за смаком</td>
-                </tr>
-            </table>
+            <div class="container">
+                <h2>Інгредієнти (таблиця)</h2>
+                <table>
+                    <tr>
+                        <th>Інгредієнт</th>
+                        <th>Кількість</th>
+                    </tr>
+                    <tr>
+                        <td>Курячий бульйон</td>
+                        <td>1 літр</td>
+                    </tr>
+                    <tr>
+                        <td>Курка (варена)</td>
+                        <td>200 г</td>
+                    </tr>
+                    <tr>
+                        <td>Морква</td>
+                        <td>1 шт</td>
+                    </tr>
+                    <tr>
+                        <td>Картопля</td>
+                        <td>2 шт</td>
+                    </tr>
+                    <tr>
+                        <td>Цибуля</td>
+                        <td>1 шт</td>
+                    </tr>
+                    <tr>
+                        <td>Сіль, перець</td>
+                        <td>за смаком</td>
+                    </tr>
+                </table>
+            </div>
         </section>
 
         <section>
-            <h2>Відео рецепту</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vQ8lF-OLl3s?si=Xiief1yvAzBAs5Y9"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div class="container">
+                <h2>Відео рецепту</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vQ8lF-OLl3s?si=Xiief1yvAzBAs5Y9"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Мій Веб-сайт. Усі права захищено.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FoodieHub. Усі права захищено.</p>
+        </div>
     </footer>
 
 </body>

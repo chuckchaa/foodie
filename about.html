@@ -4,37 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>About</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Про нас</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__inner container">
+            <h1 class="header__title title">FoodieHub</h1>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">Home</a></li>
+                    <li><a class="nav__link" href="recipes.html">Recipes</a></li>
+                    <li><a class="nav__link nav__link_active" href="about.html">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section>
-            <h2>Наша команда</h2>
-            <p>Ми - команда ентузіастів, які люблять готувати та ділитися рецептами.</p>
+            <div class="container">
+                <h2>Наша команда</h2>
+                <p>Ми - команда ентузіастів, які люблять готувати та ділитися рецептами.</p>
+            </div>
+
         </section>
 
         <section>
-            <h2>Наші цінності</h2>
-            <p>Наша місія - надавати смачні та корисні рецепти для наших читачів.</p>
+            <div class="container">
+                <h2>Наші цінності</h2>
+                <p>Наша місія - надавати смачні та корисні рецепти для наших читачів.</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Мій Веб-сайт. Усі права захищено.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FoodieHub. Усі права захищено.</p>
+        </div>
     </footer>
 
 </body>
