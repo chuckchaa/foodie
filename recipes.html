@@ -31,9 +31,23 @@
         <section>
             <div class="container">
                 <h2>Рецепти</h2>
-                <ul>
-                    <li><a href="recipe.html">Рецепт 1</a></li>
+                <ul class="recipes" id="recipes">
                 </ul>
+                <form class="form" action="#" id="add-form">
+                    <label for="name">Назва рецепта</label>
+                    <input type="text" name="name" required>
+                    <br>
+                    <label for="description">Опис</label>
+                    <input type="text" name="description" required>
+                    <br>
+                    <label for="instruction">Інструкція</label>
+                    <input type="text" name="instruction" required>
+                    <br>
+                    <label for="videourl">Посилання на відео</label>
+                    <input type="text" name="videourl" required>
+                    <br>
+                    <button type="submit">Створити</button>
+                </form>
             </div>
         </section>
     </main>
@@ -45,6 +59,7 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="recipes.js"></script>
 
 </body>
 
