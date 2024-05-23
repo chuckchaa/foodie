@@ -46,8 +46,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function resfreshList() {
   const recipesContainer = document.getElementById('recipes')
 
-  const data = await (await fetch('http://localhost:8080/api/recipe')).json()
-
+  const data = await (
+    await fetch('http://localhost:8080/api/recipe').catch(() => {
+      recipesContainer.innerHTML = '<p>Рецепти відсутні</p>'
+    })
+  ).json()
   if (data.length) {
     recipesContainer.innerHTML = ''
     data.forEach(recipe => {
