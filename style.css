@@ -11,6 +11,12 @@ body {
 
 main {
     flex-grow: 1;
+    padding-top: 94px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px 0;
 }
 
 img {
@@ -35,6 +41,10 @@ iframe {
 
 .header {
     padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .header__inner {
@@ -176,7 +186,41 @@ iframe {
     margin-bottom: 10px;
 }
 
+
+#parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 94px);
+    position: relative;
+}
+
+#parallax>h1 {
+    color: white;
+    font-size: 70px;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 20px 50px;
+    border-radius: 10px;
+}
+
+#background,
+#products {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 @media (max-width: 567px) {
+    main {
+        padding-top: 67px;
+    }
+
+    #parallax {
+        min-height: calc(100vh - 67px);
+    }
+
     .burger {
         display: block;
     }
