@@ -170,22 +170,40 @@ iframe {
 }
 
 .form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
     background-color: black;
     border-radius: 50px;
-    padding: 20px;
+    padding: 30px;
     color: white;
     max-width: 500px;
     margin-top: 30px;
 }
 
-.form>label {
-    margin-right: 20px;
+.form__field {
+    width: 40%;
 }
 
-.form>input {
-    margin-bottom: 10px;
+.form label {
+    display: block;
+    margin-bottom: 5px;
 }
 
+.form input,
+.form textarea {
+    display: block;
+    width: 100%;
+}
+
+.form__field--full {
+    width: 100%;
+}
+
+#update-form {
+    margin-bottom: 20px;
+}
 
 #parallax {
     display: flex;
@@ -244,4 +262,14 @@ iframe {
         box-shadow: 0 5px 5px -2px black;
         transition: transform .25s ease-out;
     }
+
+    #parallax>h1 {
+        font-size: 40px;
+        padding: 10px 25px;
+    }
+
+    .form__field {
+        width: 100%;
+    }
+
 }

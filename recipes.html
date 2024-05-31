@@ -34,18 +34,19 @@
                 <ul class="recipes" id="recipes">
                 </ul>
                 <form class="form" action="#" id="add-form">
-                    <label for="name">Назва рецепта</label>
-                    <input type="text" name="name" required>
-                    <br>
-                    <label for="description">Опис</label>
-                    <input type="text" name="description" required>
-                    <br>
-                    <label for="instruction">Інструкція</label>
-                    <input type="text" name="instruction" required>
-                    <br>
-                    <label for="videourl">Посилання на відео</label>
-                    <input type="text" name="videourl" required>
-                    <br>
+                    <div class="form__field">
+                        <label for="name">Назва рецепта</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form__field"><label for="description">Опис</label>
+                        <input type="text" name="description" required>
+                    </div>
+                    <div class="form__field"><label for="instruction">Інструкція</label>
+                        <input type="text" name="instruction" required>
+                    </div>
+                    <div class="form__field"><label for="videourl">Посилання на відео</label>
+                        <input type="text" name="videourl" required>
+                    </div>
                     <button type="submit">Створити</button>
                 </form>
             </div>
