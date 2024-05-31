@@ -46,30 +46,32 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function resfreshList() {
   const recipesContainer = document.getElementById('recipes')
 
-  const data = await (
-    await fetch('http://localhost:8080/api/recipe').catch(() => {
-      recipesContainer.innerHTML = '<p>Рецепти відсутні</p>'
-    })
-  ).json()
-  if (data.length) {
-    recipesContainer.innerHTML = ''
-    data.forEach(recipe => {
-      const recipeItem = document.createElement('li')
-      recipeItem.classList.add('recipe__item')
+  try {
+    const res = await fetch('http://localhost:8080/api/recipe')
+    const data = await res.json()
 
-      const recipeLink = document.createElement('a')
-      recipeLink.textContent = recipe.name
-      recipeLink.href = `recipe.html?id=${recipe._id}`
+    if (data.length) {
+      recipesContainer.innerHTML = ''
+      data.forEach(recipe => {
+        const recipeItem = document.createElement('li')
+        recipeItem.classList.add('recipe__item')
 
-      const recipeDeleteButton = document.createElement('button')
-      recipeDeleteButton.dataset['idRecipe'] = recipe._id
-      recipeDeleteButton.textContent = 'Видалити'
-      recipeDeleteButton.style.marginLeft = '10px'
-      recipeItem.append(recipeLink)
-      recipeItem.append(recipeDeleteButton)
-      recipesContainer.append(recipeItem)
-    })
-  } else {
-    recipesContainer.innerHTML = '<p>Рецепти відсутні</p>'
+        const recipeLink = document.createElement('a')
+        recipeLink.textContent = recipe.name
+        recipeLink.href = `recipe.html?id=${recipe._id}`
+
+        const recipeDeleteButton = document.createElement('button')
+        recipeDeleteButton.dataset['idRecipe'] = recipe._id
+        recipeDeleteButton.textContent = 'Видалити'
+        recipeDeleteButton.style.marginLeft = '10px'
+        recipeItem.append(recipeLink)
+        recipeItem.append(recipeDeleteButton)
+        recipesContainer.append(recipeItem)
+      })
+    } else {
+      recipesContainer.innerHTML = '<li><p>Рецепти відсутні</p></li>'
+    }
+  } catch (err) {
+    recipesContainer.innerHTML = '<li><p>Рецепти відсутні</p></li>'
   }
 }
