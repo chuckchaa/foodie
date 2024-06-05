@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /foodie/page-not-found.html
+Allow: /
+
+Sitemap: https://chuckchaa.github.io/foodie/sitemap.xml
